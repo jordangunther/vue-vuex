@@ -9,9 +9,12 @@
     import { mapGetters } from 'vuex';
 
     export default {
-        computed: mapGetters([
-            'doubleCounter',
-            'stringCounter'
-        ])
+        computed: {
+            //... SPREAD Operator: An es6 solution to put an object immediately inside an object. It pulls out all properties and methods in the object and create seperate key value pairs for each of them
+            ...mapGetters([
+                'doubleCounter',
+                'stringCounter'
+            ])
+        }
     }
 </script>
